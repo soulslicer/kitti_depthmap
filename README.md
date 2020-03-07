@@ -1,13 +1,16 @@
 # kitti_depthmap
-module for converting raw lidar in kitti to depthmaps in C++/Python
+Module for converting raw lidar in kitti to depthmaps in C++/Python.
 
+## Why I wrote this
+Surprisingly, I wasn't able to find any decent/simple/readable code online to figure out how to generate registered depthmaps from the kitti pointcloud data. And those that did, gave garbage results (when actually visualized as a pointcloud), or were written with for loops in python which were way too slow for a data pipeline. This codebase handles parallax errors that come from a large transformation between a sparse 3d sensor and an rgb image, and also performs resampling in spherical coordinate space, leading to more accurate results.
+. 
 ### To Run
 ```
 mkdir build;
 cd build;
 cmake ..;
 make
-python3 testing.py
+python3 testing.py # Change the path in the file to point to the kitti data
 ```
 
 ### Large Image
