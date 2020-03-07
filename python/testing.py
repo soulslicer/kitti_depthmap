@@ -30,7 +30,7 @@ def plot_depth(dmap_raw_np, rgb_cv, name="win"):
     cv2.waitKey(15)
 
 # Parameters
-basedir = "/home/raaj/cmu/papers/neuralrgbd/data/datasets/kitti//rawdata"
+basedir = "kitti"
 date = "2011_09_26"
 drive = "0005"
 # date = "2011_10_03"
